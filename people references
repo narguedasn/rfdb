@@ -1,0 +1,110 @@
+CREATE TABLE people_lookup
+(
+	complete_name VARCHAR PRIMARY KEY
+);
+
+INSERT INTO people_lookup (complete_name) VALUES
+('John Reinier'),
+('Constance Hausman'),
+('Sarah Eysenbach'),
+('Claire Weldon'), 
+('Timothy Krynak'), 
+('Edward Kuilder'), 
+('Jonaton Cepec'), 
+('Debra Shankland'), 
+('Charles Thomas'), 
+('John Mack'),
+('Jim Bissell'),
+('Andy Jones'), 
+('Tim Matson'), 
+('Judy Semroc'), 
+('David Kriska'), 
+('Larry Rosche'), 
+('Harvey Webster'), 
+('Nidia Arguedas'),
+('Michael Ryan'),
+('Gavin Svenson'),
+('Fred Losi'),
+('Terry Robison'),
+('Stefanie Verish'),
+('Rick Tyler'),
+('Sharon Hosko'),
+('Mike Durkalec'),
+('Mark Warman'), 
+('Kal Ivanov'), 
+('Mike Benard'), 
+('Ralph Pfingsten'),
+('Roger Thoma'), 
+('Christopher Blackwood'),
+('Gene Kritsky'), 
+('Thomas Watters'), 
+('Barbara Andreas'),
+('Richard Bradley'),
+('Ralph Gibson'),
+('Robert Krebs'), 
+('Emily Sofia Jalics Rauschert'), 
+('Bernard M. Walton'), 
+('David Horn'),
+('Jerry Wiedmann')
+;
+
+
+
+CREATE TABLE people
+(
+	
+	complete_name VARCHAR UNIQUE REFERENCES people_lookup (complete_name),
+	Last_name VARCHAR NOT NULL,
+	Associated_institution VARCHAR,
+	Title VARCHAR,
+	email VARCHAR,
+	Phone_number VARCHAR,
+	Physical_address VARCHAR
+);
+
+
+	
+INSERT INTO People VALUES
+('John Reinier', 'Reinier', 'CM', 'Wetland Ecologist', 'jer@clevelandmetroparks.com', '440-253-2165', 'West Creek Stewardship Center'),
+('Constance Hausman', 'Hausman', 'CM', 'Plant and Restoration Ecologist', 'ceh@clevelandmetroparks.com', '440-253-2164', 'West Creek Stewardship Center'),
+('Sarah Eysenbach', 'Eysenbach', 'CM', 'Natural Resources Specialist', ' sre@clevelandmetroparks.com', '440-253-2166', 'West Creek Stewardship Center'),
+('Claire Weldon', 'Weldon', 'CM', 'Aquatic Research Coordinator', 'sgw@clevelandmetroparks.com', '440-331-8018', 'Rocky River Management Center'),
+('Timothy Krynak', 'Krynak', 'CM', 'Project Manager for Natural Resources', 'tjk@clevelandmetroparks.com', '440-253-2153', 'West Creek Stewardship Center'),
+('Edward Kuilder', 'Kuilder', 'CM', 'Natural Resources Area Manager', 'ejk@clevelandmetroparks.com', '440-439-5127', 'Bedford Reservation Management Center'),
+('Jonaton Cepec', 'Cepec', 'CM', 'Wildlife Ecologist', 'jdc@clevelandmetroparks.com','216-739-6047', 'Strongsville Park Operations'),
+('Debra Shankland', 'Shankland', 'CM', 'Naturalist I', 'dks@cleveland,etroparks.com', '440-253-2152', 'West Creek Stewardship Center'),
+('Charles Thomas', 'Thomas', 'N/A' , 'Retired CM Botanist', 'chuckt@prodigy.net', 'N/A', 'N/A'),
+('John Mack', 'Mack', 'Catalina Island Conservancy','Chief Conservation and Education Officer', 'jmack@catalinaconservancy.org', '310-510-2595 x 128', 'Middle Ranch, Santa Catalina Island, California'),
+('Jim Bissell', 'Bissell', 'CMNH', 'Curator and Head of Botany', 'jbissell@cmnh.org', '216-231-4600 x 3219', 'University Circle, Cleveland'),
+('Andy Jones', 'Jones', 'CMNH', 'Director of Science and Curator of Birds', 'ajones@cmnh.org', '216-231-4600 x 3332', 'University Circle, Cleveland'),
+('Tim Matson', 'Matson', 'CMNH', 'Curator and Head of Vertebrate Zoology', 'tmatson@cmnh.org', '216-231-4600 x 3307', 'University Circle, Cleveland'),
+('Judy Semroc', 'Semroc', 'CMNH', 'Conservation Specialist', 'rainefox@neo.rr.com', '216-231-4600', 'University Circle, Cleveland'),
+('David Kriska', 'Kriska', 'CMNH', 'Biodiversity Coordinator', 'dkriska@cmnh.org', '216-231-4600', 'University Circle, Cleveland'),
+('Larry Rosche', 'Rosche', 'CNMH', 'Conservation Specialist', 'lrosche@cmnh.org', '216-231-4600', 'University Circle, Cleveland'),
+('Harvey Webster', 'Webster', 'CMNH', 'Director of Wildlife Resources', 'hwebster@cmnh.org', '216-231-4600 x 3314', 'University Circle, Cleveland'),
+('Nidia Arguedas', 'Arguedas', 'CM', 'Conservation Planner', 'na@clevelandmetroparks.com', '216-635-3292', 'Administration Building'),
+('Michael Ryan', 'Ryan', 'CMNH', 'Curator and Head of Vertebrate Paleontology', 'mryan@cmnh.org', '216-231-4600 x 3224', 'University Circle, Cleveland'), 
+('Gavin Svenson', 'Svenson', 'CMNH', 'Curator and Head of Invertebrate Zoology', 'gsvenson@cmnh.org', '216-231-4600 x 3315', 'University Circle, Cleveland'),
+('Fred Losi', 'Losi', 'N/A', 'Volunteer Naturalist', 'fred@losifamily.net', 'no', 'N/A'),
+('Terry Robison', 'Robison', 'CM', 'Director of Natural Resources', 'tlr@clevelandmetroparks.com', '440-253-2162', 'West Creek Stewardship Center'),
+('Stefanie Verish', 'Verish', 'CM', 'Naturalist/Artist', 'skv@clevelandmetroparks.com', '440-247-7075', 'North Chagrin Nature Center'),
+('Rick Tyler', 'Tyler', 'N/A', 'Retired CM Natural Resources Manager', 'rtdrummer1@oh.rr.com', 'N/A', 'N/A'),
+('Sharon Hosko', 'Hosko', 'CM', 'Nature Center Manager', 'sbh@clevelandmetroparks.com', '440-526-1012', 'Brecksville Nature Center'),
+('Mike Durkalec', 'Durkalec', 'CM', 'Aquatic Biologist', 'md@clevelandmetroparks.com', '440-331-8017', 'Rocky River Management Center'), 
+('Mark Warman', 'Warman', 'CM', 'Education Specialist', 'mjw1@clevelandmetroparks.com', '440-253-2154', 'West Creek Stewardship Center'),
+('Kal Ivanov', 'Ivanov', 'VMNH', 'Assistant Curator - Invertebrate Zoology', 'kal.ivanov@vmnh.virginia.gov', '276-634-4141', 'Martinsville, VA'),
+('Mike Benard', 'Benard', 'CWRU', 'Associate Professor - Urban and Environmental Studies', 'michael.benard@case.edu','216-368-1080', 'DeGrace Hall, CWRU'),
+('Ralph Pfingsten', 'Pfingsten', 'CMNH', 'Research Associate - Vertebrate Zoology', 'rpfingsten@cmnh.org', '216-231-4600 x 3307', 'University Circle, Cleveland'),
+('Roger Thoma', 'Thoma', 'CMNH', 'Research Associate - Vertebrate Zoology', 'rthoma@cmnh.org', '216-231-4600 x 3307', 'University Circle, Cleveland'),
+('Christopher Blackwood', 'Blackwood', 'KSU', 'Associate Professor - Soil Biology', 'cblackwo@kent.edu', '330-672-3895', '105 Cunningham Hall, Kent'),
+('Gene Kritsky', 'Kritsky', 'MSJ', 'Professor - Biology', 'Gene.kritsky@msj.edu', '513-244-4401', 'Science Building, Mount St. Joseph University, Cincinnati'),
+('Thomas Watters', 'Watters', 'OSU', 'Curator of Molluscs', 'watters.1@osu.edu', '614-292-6170', 'Museum of Biological Diversity, Columbus'),
+('Barbara Andreas', 'Andreas', 'OSU', 'Visiting Scholar - Botany', 'andreas.17@osu.edu', '614-292-7773', 'Museum of Biological Diversity, Columbus'),
+('Richard Bradley', 'Bradley', 'OSU', 'Associate Professor Emeritus', 'bradley.10@osu.edu', '740-725-6266', 'Museum of Biological Diversity, Columbus'),
+('Ralph Gibson', 'Gibson', 'CSU', 'Associate Professor', 'a.gibson@csuohio.edu', '216-523-7538', '2121 Euclid Avenue, SI 229, Cleveland'),
+('Robert Krebs', 'Krebs', 'CSU', 'Professor', 'r.krebs@csuohio.edu', '216-523-7553', '2121 Euclid Ave. SI 214, Cleveland'),
+('Emily Sofia Jalics Rauschert', 'Rauschert', 'CSU', 'Assistant Professor', 'e.rauschert@csuohio.edu', '216-687-3506', '2121 Euclid Ave. SR G66, Cleveland'),
+('Bernard M. Walton', 'Walton', 'CSU', 'Associate Professor', 'b.walton@csuohio.edu', '216-687-2407, 216-543-5138', '2121 Euclid Ave. SR 279,280, Cleveland'),
+('David Horn', 'Horn', 'OSU', 'Professor Emeritus', 'horn.1@osu.edu', 'N/A', 'Museum of Biological Diversity, Columbus'),
+('Jerry Wiedmann', 'Wiedmann', '', 'Lepidoptera Researcher', 'wiedmannJL@gmail.com', 'N/A', 'The Ohio Lepidopterists')  
+; 
